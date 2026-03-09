@@ -1,0 +1,130 @@
+/* === STYLE GÉNÉRAL === */
+
+.form-title {
+    display: flex;                                                               /* Transforme l'élément en conteneur flex, permettant d'aligner et de distribuer facilement ses enfants */
+    align-items: center ;                                                        /* Centre les éléments enfants verticalement dans un conteneur flex */                                                   
+    justify-content: center;                                                     /* Centre les éléments enfants horizontalement dans un conteneur flex */
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.animated-icon {
+    display: inline-block;                                                       /* Permet à l'élément de rester sur la même ligne que d'autres éléments tout en gardant la possibilité de définir sa largeur et sa hauteur */
+    vertical-align: middle;                                                      /* Aligne verticalement l’élément au milieu de sa ligne par rapport aux autres éléments inline ou inline-block */
+    margin-top: -0.375rem;
+    margin-left: 0.5rem;
+}
+
+.form-container {
+    width: 40%;
+    margin: 2rem auto 2rem auto;                                               /* Définit les marges de l’élément : 112px en haut, auto à gauche et à droite pour centrer horizontalement, 120px en bas */
+    background-color: #2b2f33;
+    padding-top: 2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.3);                             /* Ombre portée autour de l'élément : 0px (pas de décalage horizontal), 4px (décalage vertical pour que l'ombre soit en dessous)
+                                                                                 12px (flou de l'ombre pour un effet doux), rgba(0,0,0,0.3) : couleur noire avec 30% d'opacité */
+    color: #f5f6f8;
+}
+
+/* === GROUPE LABEL + INPUT SUR LA MÊME LIGNE === */
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;  
+    justify-content: flex-start;                                                  /* Aligne les éléments enfants au début de l'axe principal du conteneur flex (généralement à gauche) */
+    margin-bottom: 1rem;   
+}
+
+/* === LABEL À GAUCHE === */
+.form-label {
+    width: 50%;
+    font-weight: bold;
+    background-color: #f5f6f8;
+    color: black;
+    padding: 0.5rem 0.75rem;                                                      /* Espace intérieur de l'élément : 8px en haut et en bas, 12px à gauche et à droite */
+    border-radius: 0.25rem;   
+    text-align: left;
+    font-size: 0.75rem;
+}
+
+/* === Groupe des boutons radio === */
+.form-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;                                                                  /* espace entre Oui / Non */
+    width: 54%;                                                                   /* identique à .form-input */
+}
+
+.form-radio-group label {
+    font-weight: normal;
+    color: #f5f6f8;
+}
+
+.form-radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+/* === CHAMPS À DROITE === */
+.form-input {
+    width: 54%;
+    padding: 0.5rem 0.75rem;   
+    border: 0.0625rem solid #f5f6f8;                                            /* Bordure fine autour de l'élément : 1px d'épaisseur, style solide, couleur #f5f6f8 (gris très clair) */
+    border-radius: 0.25rem;   
+    font-size: 0.75rem;   
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0.25rem rgba(0, 123, 255, 0.4);                             /* Ombre portée autour de l'élément : 0px (pas de décalage horizontal), 0px (pas de décalage vertical),
+                                                                                  4px (flou de l'ombre pour un léger halo), rgba(0,123,255,0.4) : couleur bleu clair semi-transparente */
+    outline: none;                                                                /* Supprime le contour (outline) par défaut autour de l'élément */
+}
+
+/* === BOUTON === */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;   
+}
+
+.form-actions input {
+    margin-bottom: 0.5rem;
+}
+
+.form-submit-btn {
+    background-color: #007bff;
+    color: #f5f6f8;
+    border: none;
+    padding: 0.625rem 1.25rem;    
+    margin-top: -1rem;    
+    margin-bottom: 2rem;   
+    margin-left: 0 auto;
+    border-radius: 0.25rem; 
+    font-size: 0.75rem;   
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;                                            /* Ajoute une transition fluide de la couleur de fond sur 0.3 secondes */
+    margin-bottom: -1.5rem;   
+}
+
+.form-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* === LIENS DE RETOUR A LA LISTE === */
+
+.return_link-form {
+    color: #f5f6f8;
+    text-decoration: none;                                                        /* Supprime toute décoration du texte (soulignement, ligne au-dessus ou en dessous) */
+}
+
+.error-box {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}

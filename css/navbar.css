@@ -1,0 +1,135 @@
+nav {
+    background-color: #abafaf; 
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Fixer la navbar en haut de page ===== */
+.navbar.fixed-top {
+    position: fixed;                                                            /* Positionne la navbar de manière fixe par rapport à la fenêtre */
+    top: 0;                                                                     /* Place la navbar en haut de la page */
+    left: 0;                                                                    /* Aligne la navbar sur le bord gauche */
+    width: 100%;                                                                /* La navbar occupe toute la largeur de la fenêtre */
+    z-index: 1000;                                                              /* S’assure que la navbar reste au-dessus du contenu */                                                              
+    background-color: #abafaf;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.15);                     /* Ombre portée légère sous l'élément : 0px (décalage horizontal), 2px (décalage vertical (ombre légèrement en dessous de l'élément),
+                                                                                5px : flou de l'ombre pour un effet doux, rgba(0, 0, 0, 0.15) : couleur noire avec 15% d'opacité pour que l'ombre reste subtile */
+}
+
+/* ===== Hamburger ===== */
+.navbar-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}
+
+
+/* ===== Menu déroulant principal ===== */
+.dropdownmenu {
+    list-style: none;                                                           /* Supprime les puces ou numéros par défaut des listes (ul, ol) */
+    margin: 0;                                                                  /* Supprime toutes les marges autour de l'élément (haut, droite, bas, gauche) */
+    padding: 0;                                                                 /* Supprime tout l'espace intérieur de l'élément (haut, droite, bas, gauche) */
+    display: flex;
+    justify-content: center;                                                    /* Centrer les items horizontalement */
+    background-color: #abafaf;
+}
+
+.dropdownmenu > li {
+    position: relative;                                                         /* Nécessaire pour positionner les sous-menus */
+}
+
+/* ===== Liens principaux du menu ===== */
+.dropdownmenu > li > a,
+.dropdownmenu > li > span {
+    display: block;
+    padding: 0.875rem 1.25rem;
+    color: #34495e;
+    font-weight: bold;
+    text-decoration: none;                                                      /* Supprime toute décoration du texte (soulignement, ligne au-dessus ou en dessous) */
+    cursor: pointer;
+    transition: background-color 0.3s;                                          /* Ajoute une transition fluide à la couleur de fond : background-color : propriété CSS à animer,
+                                                                                0.3s : durée de la transition (0,3 seconde) */
+}
+
+.dropdownmenu > li:hover > a,
+.dropdownmenu > li:hover > span {
+    background-color: #34495e;                                                /* Changement couleur fond au survol */
+    color: #e3ebeb;                                                           /* Changement couleur texte */
+}
+
+/* ===== Sous-menus déroulants ===== */
+.dropdownmenu li ul {
+    display: none;                                                              /* Masque le sous-menu par défaut */
+    position: absolute;                                                         /* Positionne le sous-menu par rapport à l'élément parent */
+    top: 100%;                                                                  /* Place le sous-menu juste en dessous de l'élément parent */
+    left: 0;                                                                    /* Aligne le sous-menu sur le bord gauche de l'élément parent */
+    min-width: 12.5rem;                                                         /* Largeur minimale du sous-menu pour s'assurer qu'il soit suffisamment large */                      
+    background-color: #abafaf;
+    z-index: 2000;                                                              /* Place le sous-menu au-dessus des autres éléments */
+    border-radius: 0 0 0.25rem 0.25rem;                                         /* 4px 4px : coins inférieurs arrondis pour un effet esthétique */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);                        /* 4px 6px : ombre légère pour donner du relief */
+    padding: 0;                                                                 /* Supprime tout espace intérieur, afin que les éléments du sous-menu collent au bord */                                 
+}
+
+.dropdownmenu li:hover ul {
+    display: block;                                                             /* Affiche le sous-menu lorsque l'utilisateur survole l'élément parent <li> */
+}
+
+.dropdownmenu li ul li {
+    width: 100%;                                                                /* Chaque élément du sous-menu prend toute la largeur du sous-menu parent */
+}
+
+.dropdownmenu li ul li a {
+    display: block;
+    width: 100%;                       
+    padding: 0.75rem 1rem;                                                      /* Définit l'espace intérieur de l'élément : (12px) en haut et en bas, (16px) à gauche et à droite */
+    color: #2b2f33;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    box-sizing: border-box;                                                     /* Inclut le padding et la bordure dans la largeur et hauteur de l'élément */             
+}
+
+.dropdownmenu li ul li a:hover {
+    background-color: #3d566e;
+    color: #e3ebeb;
+}
+
+/* Lien de déconnexion (dernier item) */
+.dropdownmenu > li:last-child > a {
+    color: #85170b;
+    font-weight: bold;
+}
+
+.dropdownmenu > li:last-child > a:hover {
+    background-color: #85170b;
+    color: #e3ebeb;
+}
+
+/* Media queries pour tablettes et mobiles */
+@media (max-width: 992px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .dropdownmenu {
+        display: none;  /* Caché par défaut */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dropdownmenu > li {
+        width: 100%;
+    }
+
+    .dropdownmenu li ul {
+        position: static;
+        display: none;  /* Masqué par défaut, ouvert au clic */
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .dropdownmenu li ul li a {
+        padding-left: 2rem;
+    }
+}
