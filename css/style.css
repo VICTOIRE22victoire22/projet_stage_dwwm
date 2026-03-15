@@ -24,7 +24,6 @@ ul {
     box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
     color: #2b2f33;
     text-align: center;
-    min-height: calc(100vh - 3.75rem);
     box-sizing: border-box;
 }
 
@@ -37,11 +36,12 @@ ul {
 
 .accueil-image {
     display: block;
-    width: 50%;        /* taille normale sur grand écran */
-    max-width: 40rem;  /* limite maximum */
+    width: 50%;
+    max-width: 40rem;
     height: auto;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto;
     border-radius: 0.5rem;
+    padding-bottom: 15.2rem;
 }
 
 /* TITRE POUR LES PAGES INDEX */

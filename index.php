@@ -208,8 +208,8 @@ ob_start();
             echo "<p>Erreur : " . htmlspecialchars($e->getMessage()) . "</p>";
         }
     }
+    ob_end_flush();
 ?>
 </div>
 </body>
 </html>
-ob_end_flush();
