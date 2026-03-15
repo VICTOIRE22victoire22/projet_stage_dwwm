@@ -332,4 +332,3 @@
                    && !empty($data['phone_model']);
         }
     }
-?>

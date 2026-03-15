@@ -159,4 +159,3 @@
                 && !empty($data['sda_phone_line_id']);
         }
     }
-?>

@@ -354,4 +354,3 @@
                 && !empty($data['phone_line_status']);
         }
     }
-?>

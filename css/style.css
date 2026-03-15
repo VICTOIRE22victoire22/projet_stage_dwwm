@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 1.875rem;
     background-color: #2b2f33;
-    padding-top: 2.1875rem;
+    box-sizing: border-box;
 }
 
 ul {
@@ -16,15 +16,16 @@ ul {
 /* ============================================================================================ PAGE ACCUEIL =======================================================================================================*/
 
 .accueil-container {
-    width: 98%;
-    margin: 0.75rem auto;
-    padding: 1.25rem 1.25rem;                           
+    width: auto;
+    margin: 0;
+    padding: 1.25rem;
     background-color: #f5f6f8;
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
     color: #2b2f33;
     text-align: center;
-    min-height: 49.6875rem;
+    min-height: calc(100vh - 3.75rem);
+    box-sizing: border-box;
 }
 
 .accueil-container p {
@@ -35,10 +36,10 @@ ul {
 }
 
 .accueil-image {
-    width: 67%;
-    height: auto;
-    max-width: 90rem;
     display: block;
+    width: 50%;        /* taille normale sur grand écran */
+    max-width: 40rem;  /* limite maximum */
+    height: auto;
     margin: 0 auto 2rem auto;
     border-radius: 0.5rem;
 }

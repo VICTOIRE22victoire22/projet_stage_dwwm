@@ -315,4 +315,3 @@
                 && !empty($data['pabx_series_number']);
         }
     }
-?>

@@ -302,4 +302,3 @@
             return !empty($data['site_name']);
         }
     }
-?>

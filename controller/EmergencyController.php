@@ -319,4 +319,3 @@
                    && !empty($data['emergency_type']);           // Le type d'urgence ne doit pas être vide
         }
     }   
-?>

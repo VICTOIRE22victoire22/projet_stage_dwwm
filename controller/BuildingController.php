@@ -343,4 +343,3 @@
                    && !empty($data['building_erp_category']);       // La catégorie ERP du bâtiment ne doit pas être vide
         }   
     }
-?>

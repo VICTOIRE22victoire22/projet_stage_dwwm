@@ -340,4 +340,3 @@
                 && !empty($data['equipment_type']);
        }
     }
-?>

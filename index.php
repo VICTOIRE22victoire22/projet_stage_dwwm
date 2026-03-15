@@ -1,4 +1,5 @@
 <?php 
+ob_start();
 
     /** Ce fichier reste le point d'entrée principal de l'application. 
     * Il sert de routeur et décide quel controller et quelle méthode appeler 
@@ -7,8 +8,7 @@
 
     //-------------- INCLUSION DES ELEMENTS COMMUNS --------------
     require_once 'authentification.php';                             // Gestion de la session + authentification
-    require_once 'includes/roles.php';                              // Gestion des roles et permission d'accès
-    require_once 'includes/navbar.html.php';                          // Barre de navigation.                                                    
+    require_once 'includes/roles.php';                              // Gestion des roles et permission d'accès                                            
 
     //-------------- CONNEXION A LA BASE DE DONNEES --------------
     require_once __DIR__ . '/config/db.php';
@@ -50,6 +50,7 @@
             echo '<link rel="stylesheet" href="' . $page_css . '">';
         }     
     ?>
+        <? require_once 'includes/navbar.html.php' ?>;                         // Barre de navigation.        
 </head>
 
 <body>
@@ -69,7 +70,7 @@
         	echo "<p>Bonjour " . htmlspecialchars($_SESSION['user_firstname']) . " et bienvenue sur l'application de gestion du parc téléphonique.</p>";
 
             // IMAGE ACCUEIL
-            echo "<img src='/includes/wolverine-comic-book-still-image-4049206977.jpg' class='accueil-image' />";
+            echo "<img src='/includes/image-ecran.png' class='accueil-image' />";
     	}
 
         // Récupération du paramètre '?page' dans l'URL
@@ -211,3 +212,4 @@
 </div>
 </body>
 </html>
+ob_end_flush();

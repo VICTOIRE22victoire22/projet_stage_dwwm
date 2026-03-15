@@ -309,4 +309,3 @@
                    && preg_match("/^[A-Za-zÀ-ÿ '-]+$/", $data['agent_lastname']);
         }
     }
-?>

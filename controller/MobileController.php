@@ -343,4 +343,3 @@
                    && !empty($data['mobile_status']);
         }
     }
-?>

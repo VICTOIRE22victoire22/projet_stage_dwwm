@@ -373,4 +373,3 @@
             return number_format($safePrice, 2, ',', '');
         }
     }
-?>
